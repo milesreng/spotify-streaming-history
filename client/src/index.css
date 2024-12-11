@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input {
+  @apply text-stone-900 dark:text-stone-100
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+
+.layout {
+  @apply bg-stone-50 dark:bg-stone-800 text-stone-900 dark:text-stone-50
+}
+
+.navbar-link {
+  @apply px-4 py-1 rounded-md bg-stone-100 dark:bg-stone-700 hover:bg-stone-200 hover:dark:bg-stone-600 hover:cursor-pointer transition-all border-stone-300 dark:border-stone-500 border-[1px]
+}
+
+.form-input-group {
+  @apply relative z-0 w-full mb-5
+}
+
+.form-input {
+  @apply block pt-3 pb-2 px-0 w-full text-sm text-stone-900 bg-transparent border-0 border-b-2 border-stone-300 appearance-none dark:text-white dark:border-stone-600 dark:focus:border-green-400 focus:outline-none focus:ring-0 focus:border-green-500
+}
+
+.form-input-label {
+  @apply peer-focus:font-medium absolute text-stone-500 dark:text-stone-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-green-500 peer-focus:dark:text-green-400 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 
+}
+
+.form-submit-button {
+  @apply px-4 py-1 bg-green-400 dark:bg-green-500 dark:hover:bg-green-600 hover:bg-green-500 transition-all text-lg rounded-md tracking-wide mt-4 text-stone-600 dark:text-white
+}
+
+.form-error {
+  @apply text-xs mt-[-1rem] mb-[1rem] text-red-600 dark:text-red-400
+}
