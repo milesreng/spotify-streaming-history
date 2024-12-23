@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useResource } from '../hooks/useAPI'
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
 
   return (
     <div>
-      
+      <Link to='/dashboard'>Dashboard</Link>
     </div>
   )
 }

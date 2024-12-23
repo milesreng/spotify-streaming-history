@@ -10,7 +10,7 @@ export interface MongoUser {
 }
 
 export interface Stream {
-  timestamp: string,
+  timestamp: Date,
   platform: string | null,
   ms_played: number,
   conn_country: string | null,
@@ -29,5 +29,6 @@ export interface Stream {
   offline: boolean,
   offline_timestamp: string | null,
   incognito_mode: boolean,
-  userId: string
+  track_id: string,
+  user_id: string
 }
