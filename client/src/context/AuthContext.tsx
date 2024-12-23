@@ -10,6 +10,7 @@ interface AuthContextType {
   logout: () => Promise<void>,
   register: (username: string, email: string, firstName: string, password: string) => Promise<void>,
   isLoading: boolean,
+  setIsLoading: Dispatch<SetStateAction<boolean>>,
   error: string
 }
 
@@ -21,6 +22,7 @@ export const AuthContext = createContext<AuthContextType>({
   logout: async () => {},
   register: async (username: string, email: string, firstName: string, password: string) => {},
   isLoading: false,
+  setIsLoading: () => {},
   error: ''
 })
 

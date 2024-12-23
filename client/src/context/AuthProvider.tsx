@@ -7,8 +7,7 @@ import { MongoUser } from '../types/user.type'
 
 export const AuthProvider = ({ children }: AuthProps) => {
 
-  const [user, setUser] = useState<Partial<MongoUser> | null>(null)
-  const [message, setMessage] = useState<string>('')
+  const [user, setUser] = useState<MongoUser | null>(null)
   const [error, setError] = useState<string>('')
   const [isLoading, setIsLoading] = useState(false)
 
@@ -112,7 +111,7 @@ export const AuthProvider = ({ children }: AuthProps) => {
     setIsLoading(false)
   }
 
-  const context = { user, setUser, fetchUser, login, logout, register, isLoading, error }
+  const context = { user, setUser, fetchUser, login, logout, register, isLoading, setIsLoading, error }
 
   useEffect(() => {
     if (!user) fetchUser()

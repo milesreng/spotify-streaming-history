@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useEffect } from 'react'
 import axios from 'axios'
@@ -9,7 +10,7 @@ export const useResource = (
   resourceUrl: string, 
   body: unknown = undefined) => {
     const [streamingHistory, setStreamingHistory] = useState<Stream[]>([])
-    const [resource, setResource] = useState<unknown>(null)
+    const [resource, setResource] = useState<any>(null)
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState<unknown>(null)
 
