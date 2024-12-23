@@ -17,16 +17,44 @@ input:-webkit-autofill:active {
   @apply bg-stone-50 dark:bg-stone-800 text-stone-900 dark:text-stone-50
 }
 
+.tile-size-btn {
+  @apply bg-stone-700 px-4 py-1 hover:cursor-pointer hover:bg-stone-600 transition-all tracking-wider
+}
+
+.inline-link {
+  @apply text-green-400 underline hover:text-green-500 transition-all
+}
+
+.outlet-container {
+  @apply w-full
+}
+
+.content-container {
+  @apply px-8 md:px-24 min-h-[70vh] pt-8 pb-4
+}
+
+.stream-tile {
+  @apply hover:bg-stone-200 hover:dark:bg-stone-700 transition-all px-4 py-4
+}
+
+.arrow-button {
+  @apply text-4xl hover:cursor-pointer hover:text-5xl w-24 transition-all font-bold  h-[90vh] flex
+}
+
 .navbar-link {
-  @apply px-4 py-1 rounded-md bg-stone-100 dark:bg-stone-700 hover:bg-stone-200 hover:dark:bg-stone-600 hover:cursor-pointer transition-all border-stone-300 dark:border-stone-500 border-[1px]
+  @apply px-4 py-[1px] rounded-md bg-stone-100 dark:bg-stone-700 hover:bg-stone-200 hover:dark:bg-stone-600 hover:cursor-pointer transition-all border-stone-300 dark:border-stone-500 border-[1px]
 }
 
 .form-input-group {
-  @apply relative z-0 w-full mb-5
+  @apply relative z-0 w-full mb-5 my-auto
+}
+
+.radio-form-input {
+  @apply pt-[-4px] px-0 w-full text-lg text-stone-500 dark:text-stone-400 scale-75 bg-transparent  border-0 dark:border-stone-600 dark:focus:border-green-400 focus:outline-none focus:ring-0 focus:border-green-500
 }
 
 .form-input {
-  @apply block pt-3 pb-2 px-0 w-full text-sm text-stone-900 bg-transparent border-0 border-b-2 border-stone-300 appearance-none dark:text-white dark:border-stone-600 dark:focus:border-green-400 focus:outline-none focus:ring-0 focus:border-green-500
+  @apply block pt-3 pb-2 px-0 w-full text-sm text-stone-900 bg-transparent  border-0 border-b-2 border-stone-300 appearance-none dark:text-white dark:border-stone-600 dark:focus:border-green-400 focus:outline-none focus:ring-0 focus:border-green-500
 }
 
 .form-input-label {
@@ -39,4 +67,129 @@ input:-webkit-autofill:active {
 
 .form-error {
   @apply text-xs mt-[-1rem] mb-[1rem] text-red-600 dark:text-red-400
+}
+
+.chart {
+  @apply -z-50 !important
+}
+
+.active-interval-btn {
+  @apply bg-green-600 !important
+}
+
+.interval-btn {
+  @apply px-4 py-1 hover:cursor-pointer lowercase bg-stone-700 hover:bg-green-600 transition-all tracking-wider
+}
+
+.interval-btn-start {
+  @apply rounded-l-md
+}
+
+.interval-btn-end {
+  @apply rounded-r-md
+}
+
+/* react select */
+
+.chart-input {
+  @apply min-h-14 pb-[4px]
+}
+.react-select-container {
+  @apply w-full z-50 !important
+}
+
+.react-select__control {
+  @apply bg-transparent border-0 active:border-green-500 focus:ring-0 shadow-none z-50 !important
+}
+
+
+.react-select__input {
+  @apply border-neutral-300 z-50 !important
+}
+
+/* 
+.react-select__clear-indicator {
+  @apply border-neutral-300 !important
+}
+
+.react-select__group {
+  @apply border-neutral-300 !important
+}
+
+.react-select__group-heading {
+  @apply border-neutral-300 !important
+}
+
+.react-select__loading-indicator {
+  @apply border-neutral-300 !important
+}
+
+.react-select__loading-message {
+  @apply border-neutral-300 !important
+}
+
+
+
+.react-select__menu-portal {
+  @apply border-neutral-300 !important
+}
+
+.react-select__multi-value {
+  @apply border-neutral-300 !important
+}
+
+.react-select__multi-value-label {
+  @apply border-neutral-300 !important
+}
+
+.react-select__multi-value-remove {
+  @apply border-neutral-300 !important
+}
+
+.react-select__no-options-message {
+  @apply border-neutral-300 !important
+}
+
+.react-select__placeholder {
+  @apply border-neutral-300 !important
+}
+
+.react-select__single-value {
+  @apply border-neutral-300 !important
+} */
+
+.react-select__container {
+  @apply w-full border-neutral-300 relative z-10 !important
+}
+
+.react-select__indicator-separator {
+  @apply p-0 bg-green-200 opacity-50 font-bold border-neutral-300 !important
+}
+
+.react-select__dropdown-indicator {
+  @apply py-0  !important
+}
+
+.react-select__indicators-container {
+  @apply m-auto p-0 !important
+}
+
+.react-select__option {
+  @apply opacity-100 bg-stone-700 hover:bg-stone-600 z-50 !important
+} 
+
+.react-select__menu {
+  @apply opacity-100 z-50 bg-stone-800 !important
+} 
+
+.react-select__menu-portal {
+  @apply opacity-100 z-50 bg-stone-800 !important
+}
+
+.react-select__menu-list {
+  @apply border-neutral-300 z-50 !important
+}
+
+.react-select__value-container {
+  @apply h-fit py-0 m-0 bg-transparent z-50 border-neutral-300 !important
 }

@@ -14,16 +14,19 @@ const Navbar = () => {
   }
 
   return (
-    <div className='w-full flex py-2 px-4 justify-between font-header font-semibold text-lg border-b-2 border-b-stone-700'>
-      <Link to='/' className='my-auto tracking-wider text-lg'>
+    <div className='w-full flex py-4 items-center fixed z-50 dark:bg-stone-800 bg-stone-100 px-4 justify-between font-header font-semibold text-lg border-b-2 border-b-stone-300 dark:border-b-stone-700'>
+      <Link to='/dashboard' className='my-auto tracking-wider text-lg basis-1/3'>
         Spotify Streaming Summary
       </Link>
-      <div className='flex'>
+      <div className='basis-1/3 flex'>
+        <Link to='/top-tracks' className='mx-auto my-auto'>Top Tracks</Link>
+      </div>
+      <div className='flex basis-1/3 justify-end'>
         { user ? (
           <div className='flex flex-row gap-4 font-light'>
-            <div className='my-auto'>
+            {/* <Link to='/top-tracks' className='my-auto'>
               {user.email}
-            </div>
+            </Link> */}
             <div className='navbar-link' onClick={handleLogout}>
               <p>Log out</p>
             </div>
