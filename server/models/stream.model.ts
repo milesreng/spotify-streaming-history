@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
 export interface IStream extends mongoose.Document {
-  timestamp: string,
+  timestamp: Date,
   platform: string | null,
   ms_played: number,
   conn_country: string | null,
@@ -20,12 +20,13 @@ export interface IStream extends mongoose.Document {
   offline: boolean,
   offline_timestamp: string | null,
   incognito_mode: boolean,
-  userId: mongoose.Schema.Types.ObjectId
+  track_id: mongoose.Schema.Types.ObjectId,
+  user_id: mongoose.Schema.Types.ObjectId
 }
 
 export const streamSchema = new mongoose.Schema({
   timestamp: { 
-    type: String, 
+    type: Date, 
     required: true 
   },
   platform: { 
@@ -87,7 +88,12 @@ export const streamSchema = new mongoose.Schema({
     type: Boolean, 
     required: true 
   },
-  userId: { 
+  track_id: { 
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: 'Track',
+    required: true
+  },
+  user_id: { 
     type: mongoose.Schema.Types.ObjectId, 
     ref: 'User', 
     required: true 

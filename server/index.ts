@@ -14,6 +14,7 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20'
 
 import authRoutes from './routes/auth.routes'
 import userRoutes from './routes/user.routes'
+import streamingRoutes from './routes/streaming.routes'
 
 import { User } from './models/user.model'
 import { checkAuth } from './middleware/checkAuth'
@@ -149,6 +150,7 @@ app.post('/user/streams', checkAuth, upload.single('file'), streamController.upl
 
 app.use('/auth', authRoutes)
 app.use('/user', userRoutes)
+app.use('/streaming', streamingRoutes)
 
 mongoose.set('strictQuery', false)
 
@@ -159,7 +161,6 @@ mongoose.connect(MONGO_URI).then(() => {
 		usernameField: 'email',
 		passwordField: 'password'
 	}, async (email: string, password: string, done: any) => {
-    console.log('local strategy auth')
     const existUser = await User.findOne({ email })
 
     if (!existUser) {
@@ -211,5 +212,5 @@ mongoose.connect(MONGO_URI).then(() => {
 		logger.log('info', `Server running on port ${PORT}`)
 	})
 }).catch((err: any) => {
-	logger.log('error', err)
+	logger.log('error', err.reason)
 })
